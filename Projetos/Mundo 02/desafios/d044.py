@@ -24,6 +24,9 @@ elif opcao == 3:
     print('Não possui desconto. Valor R${}'.format(valor_produto))
 elif opcao == 4:
     novo_valor = valor_produto + (valor_produto * 0.20)
+    totParc = int(input('Quantas parcelas? '))
+    parcela = novo_valor / totParc
+    print('Sua compra será parcelada em {}x de R${:.2f} COM JUROS'.format(totParc, parcela))
     print('Não possui desconto. Valor R${}'.format(novo_valor))
 else:
     print('Opção invalida!')
