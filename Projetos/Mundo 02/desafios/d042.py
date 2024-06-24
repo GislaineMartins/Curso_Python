@@ -5,14 +5,17 @@ que tipo de triangulo será formado:
 - Isóceles: dois lados iguais
 - Escaleno: todos os lados diferentes
 """
-print('Digite os lados dos triangulos!')
-primeiro_lado = float(input('Digite o lado 1:'))
-segundo_lado = float(input('Digite o lado 2:'))
-terceiro_lado = float(input('Digite o lado 3:'))
+r1 = float(input('Primeiro Segmento: '))
+r2 = float(input('Segundo Segmento: '))
+r3 = float(input('Terceiro Segmento: '))
 
-if primeiro_lado == segundo_lado and primeiro_lado == terceiro_lado and segundo_lado == terceiro_lado:
-    print('Equilatero: todos os lados iguais')
-elif primeiro_lado != segundo_lado and primeiro_lado != terceiro_lado and segundo_lado != terceiro_lado:
-    print('Escaleno: todos os lados diferentes')
-elif primeiro_lado == segundo_lado or primeiro_lado == terceiro_lado or segundo_lado == terceiro_lado:
-    print('Isóceles: dois lados iguais')
+if r1 < r2 + r3 and r2 < r1 + r3 and r3 < r1 + r2:
+    print('Os seguimentos acima PODEM FORMAR triangulo', end='')
+    if r1 == r2 == r3:
+        print('EQUILATERO')
+    elif r1 != r2 != r3 != r1:
+        print('ESCALENO')
+    else:
+        print('ISÓSCELES')
+else:
+    print('Os seguimentos acima NÃO PODEM FORMAR triangulo')
